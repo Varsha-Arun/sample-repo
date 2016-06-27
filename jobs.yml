@@ -1,22 +1,22 @@
 jobs:
-  - name: repo-manifest3
+  - name: repo-manifest5
     type: manifest
     steps:
       - GET: repo-img1
-      - GET: repo-img2
-      - GET: repo-img3
-      - GET: repo-params1
-        applyTo:
-          - repo-img1
-          - repo-img2
+    #  - GET: repo-img2
+    #  - GET: repo-img3
+    #  - GET: repo-params1
+      #  applyTo:
+       #   - repo-img1
+       #   - repo-img2
     #  - GET: repo-dopts1
      # - GET: repo-replicas1
       
-  - name: repo-ecsdeploy1
-    type: ecsDeploy
-    steps:
-      - GET: repo-manifest3
-      - GET: repo-ecscluster1
+ # - name: repo-ecsdeploy1
+  #  type: ecsDeploy
+   # steps:
+    #  - GET: repo-manifest3
+     # - GET: repo-ecscluster1
       
   #- name: multimanifest-dcldeploy
    # type: dclDeploy
