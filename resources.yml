@@ -21,7 +21,7 @@ resources:
     source:
       name: "shiphitchcock1/betaci_nod_limitless_pl"
       isPull: true
-      tag: "deploy.5"
+      tag: "deploy.6"
   
   #- name: repo-dclcluster1
    # type: dclCluster
