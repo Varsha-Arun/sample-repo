@@ -21,7 +21,7 @@ resources:
     #source:
     # name : "test-node"
      
-  - name: repo-ecscluster
+  - name: repo-ecscluster1
     type: ecsCluster
     integration: varsha-ecscluster
     source:
@@ -47,4 +47,9 @@ resources:
     type: replicas
     source:
       count: 1
+      
+  - name: repo-replicas2
+    type: replicas
+    source:
+      count: 2
   
