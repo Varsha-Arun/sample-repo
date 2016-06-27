@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - GET: repo-img1
-      - GET: repo-img2
+      #- GET: repo-img2
       - GET: repo-img3
      # - GET: repo-params1
       #  applyTo:
