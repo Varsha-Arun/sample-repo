@@ -38,6 +38,14 @@ resources:
   - name: repo-dopts1
     type: dockerOptions
     source:
+      memory: 0
+      cpu-shares: 0
+      portMappings:
+        - 80:3000
+        
+  - name: repo-dopts2
+    type: dockerOptions
+    source:
       memory: 64
       cpu-shares: 8
       portMappings:
