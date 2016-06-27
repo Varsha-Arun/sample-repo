@@ -15,7 +15,7 @@ jobs:
   - name: repo-ecsdeploy2
     type: ecsDeploy
     steps:
-      - GET: repo-manifest3
+      - GET: repo-manifest5
       - GET: repo-ecscluster1
       
   #- name: multimanifest-dcldeploy
