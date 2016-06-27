@@ -5,17 +5,15 @@ jobs:
       - GET: repo-img1
       - GET: repo-img2
       - GET: repo-img3
-     # - GET: repo-params1
-      #  applyTo:
-       #   - repo-img1
-       #   - repo-img2
-      #- GET: repo-dopts2
-       # applyTo:
-        #  - repo-img2
-         # - repo-img3
-      #- GET: repo-replicas1
-       # applyTo:
-        #  - repo-replicas2
+      - GET: repo-params1
+        applyTo:
+          - repo-img1
+      - GET: repo-dopts2
+        applyTo:
+          - repo-img2
+      - GET: repo-replicas2
+        applyTo:
+          - repo-img3
       
   - name: repo-ecsdeploy3
     type: ecsDeploy
