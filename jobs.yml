@@ -4,12 +4,15 @@ jobs:
     steps:
       - GET: repo-img1
       - GET: repo-img2
-    #  - GET: repo-img3
+      - GET: repo-img3
       - GET: repo-params1
         applyTo:
           - repo-img1
        #   - repo-img2
-    #  - GET: repo-dopts1
+      - GET: repo-dopts1
+        applyTo:
+          - repo-img2
+          - repo-img3
      # - GET: repo-replicas1
       
   - name: repo-ecsdeploy2
