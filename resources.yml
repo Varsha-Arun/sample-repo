@@ -15,6 +15,14 @@ resources:
       isPull: true
       tag: "deploy.5"
       
+  - name: repo-img3
+    type: image
+    integration: cock1-hub
+    source:
+      name: "shiphitchcock1/betaci_nod_limitless_pl"
+      isPull: true
+      tag: "deploy.5"
+  
   #- name: repo-dclcluster1
    # type: dclCluster
     #integration: varsha-dcl
@@ -60,4 +68,3 @@ resources:
     type: replicas
     source:
       count: 2
-  
