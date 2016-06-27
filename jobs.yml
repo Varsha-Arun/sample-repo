@@ -6,8 +6,11 @@ jobs:
       - GET: repo-img2
       - GET: repo-img3
       - GET: repo-params1
-      - GET: repo-dopts1
-      - GET: repo-replicas1
+        applyTo:
+          - repo-img1
+          - repo-img2
+    #  - GET: repo-dopts1
+     # - GET: repo-replicas1
       
   - name: repo-ecsdeploy1
     type: ecsDeploy
