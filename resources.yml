@@ -35,35 +35,16 @@ resources:
         api_url : "betaapi.shippable.co"
         MONGO_API_URL: "localhost:28017"
         
-  - name: repo-params2
-    type: params
-    source:
-      params:
-        foo: booo
-        api_url: https://api.shippable.co
-        
   - name: repo-dopts1
     type: dockerOptions
     source:
       memory: 64
-      cpu-shares: 64
+      cpu-shares: 8
       portMappings:
         - 80:80
-        
-  - name: repo-dopts2
-    type: dockerOptions
-    source:
-      memory: 128
-      #cpu-shares: 256
-      portMappings:
-        - 80:3000 
         
   - name: repo-replicas1
     type: replicas
     source:
       count: 1
-      
-  - name: repo-replicas2
-    type: replicas
-    source:
-      count: 2
+  
