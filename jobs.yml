@@ -17,11 +17,11 @@ jobs:
        # applyTo:
         #  - repo-replicas2
       
-  #- name: repo-ecsdeploy3
-    #type: ecsDeploy
-    #steps:
-    #  - GET: repo-manifest6
-     # - GET: repo-ecscluster1
+  - name: repo-ecsdeploy3
+    type: ecsDeploy
+    steps:
+      - GET: repo-manifest6
+      - GET: repo-ecscluster1
       
   #- name: multimanifest-dcldeploy
    # type: dclDeploy
