@@ -2,7 +2,7 @@ jobs:
   - name: tp-mf1
     type: manifest
     steps:
-      - GET: tp-img3 
+      - GET: tp-test 
       - GET: tp-params1
       
   - name: tp-deploy
