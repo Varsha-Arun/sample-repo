@@ -21,13 +21,13 @@ resources:
       isPull: true
       tag: "deploy.5"
       
-  #- name: tp-img3
-   # type: image
-    #integration: cock1-hub
-    #source:
-     # name: "shiphitchcock1/betaci_nod_limitless_pl"
-      #isPull: true
-      #tag: "deploy.6"
+  - name: tp-img3
+    type: image
+    integration: cock1-hub
+    source:
+      name: "shiphitchcock1/betaci_nod_limitless_pl"
+      isPull: true
+      tag: "deploy.6"
   
   #- name: tp-dclcluster1
    # type: dclCluster
@@ -35,38 +35,28 @@ resources:
     #source:
     # name : "test-node"
      
- # - name: tp-ecscluster1
-  #  type: ecsCluster
-   # integration: varsha-ecscluster
-    #source:
-     # name : "testCL" #name of the cluster we are deploying
-      #region: "us-west-2"
+  - name: tp-ecscluster1
+    type: ecsCluster
+    integration: varsha-ecscluster
+    source:
+      name : "testCL" #name of the cluster we are deploying
+      region: "us-west-2"
      
- # - name: tp-params1
-  #  type: params
-   # source:
-    #  params:
-     #   api_url : "betaapi.shippable.co"
-      #  MONGO_API_URL: "localhost:28017"
+  - name: tp-params1
+    type: params
+    source:
+      params:
+        api_url : "betaapi.shippable.co"
+        MONGO_API_URL : "localhost:28017"
+        FOO : BOO
         
- # - name: tp-dopts1
-  #  type: dockerOptions
-   # source:
-    #  memory: 0
-     # cpu-shares: 0
-        
-  #- name: tp-dopts2
-   # type: dockerOptions
-    #source:
-     # memory: 64
-      #cpu-shares: 8
-        
- # - name: tp-replica1
-  #  type: replicas
-   # source:
-    #  count: 1
+  - name: tp-dopts1
+    type: dockerOptions
+    source:
+      memory: 200
+      publishAllPorts : true
       
-  #- name: tp-replica2
-   # type: replicas
-    #source:
-     # count: 2
+  - name: tp-replica2
+    type: replicas
+    source:
+      count: 2
