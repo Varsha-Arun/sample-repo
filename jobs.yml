@@ -5,10 +5,17 @@ jobs:
       - GET: tp-test 
       - GET: tp-params1
       
+  - name: tp-mf2
+    type: manifest
+    steps:
+      - GET: tp-img1 
+      - GET: tp-params1
+      - GET: tp-dopts1
+      
   - name: tp-deploy
     type: tripubDeploy
     steps:
-      - GET: tp-mf1
+      - GET: tp-mf2
       - GET: tp-cluster
   
   #- name: tp-ecsdeploy3
