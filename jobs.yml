@@ -11,9 +11,15 @@ jobs:
       - GET: repo-dopts2
         applyTo:
           - repo-img2
+      - GET: repo-manifest7
+  
+  - name: repo-manifest7
+    type: manifest
+    steps:
+      - GET: repo-img1
       - GET: repo-replicas2
         applyTo:
-          - repo-img3
+          - repo-manifest7
       
   - name: repo-ecsdeploy3
     type: ecsDeploy
