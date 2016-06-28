@@ -25,9 +25,9 @@ resources:
     type: image
     integration: cock1-hub
     source:
-      name: "shiphitchcock1/betaci_nod_limitless_pl"
+      name: "scriptnull/busybox"
       isPull: true
-      tag: "deploy.6"
+      tag: "nodeenv"
   
   #- name: tp-dclcluster1
    # type: dclCluster
