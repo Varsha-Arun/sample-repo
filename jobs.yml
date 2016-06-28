@@ -11,7 +11,7 @@ jobs:
       - GET: repo-dopts2
         applyTo:
           - repo-img2
-      - GET: repo-manifest7
+      
   
   - name: repo-manifest7
     type: manifest
@@ -25,6 +25,7 @@ jobs:
     type: ecsDeploy
     steps:
       - GET: repo-manifest6
+      - GET: repo-manifest7
       - GET: repo-ecscluster1
       
   #- name: multimanifest-dcldeploy
