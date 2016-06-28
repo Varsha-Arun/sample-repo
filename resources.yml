@@ -46,7 +46,7 @@ resources:
     type: params
     source:
       params:
-        api_url : "betaapi.shippable.co"
+        api_url : "betaapi.shippable.com"
         MONGO_API_URL : "localhost:28017"
         FOO : BOO
         
