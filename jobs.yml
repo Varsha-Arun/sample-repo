@@ -2,7 +2,7 @@ jobs:
   - name: tp-mf1
     type: manifest
     steps:
-      - GET: tp-img1 
+      - GET: tp-img2 
       
   - name: tp-deploy
     type: tripubDeploy
