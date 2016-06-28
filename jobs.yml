@@ -11,7 +11,7 @@ jobs:
       - GET: repo-dopts2
         applyTo:
           - repo-img2
-      
+          - repo-img3
   
   - name: repo-manifest7
     type: manifest
