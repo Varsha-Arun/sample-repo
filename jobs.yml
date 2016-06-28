@@ -13,10 +13,32 @@ jobs:
       - GET: tp-dopts1
       - GET: tp-replica2
       
+  - name: tp-mf3
+    type: manifest
+    steps:
+      - GET: tp-test 
+      - GET: tp-img2
+      - GET: tp-dopts1
+      - GET: tp-params2
+        applyTo:
+          - tp-test
+      
+  - name: tp-mf4
+    type: manifest
+    steps:
+      - GET: tp-mf3
+      - GET: tp-dopts2
+      
   - name: tp-deploy
     type: tripubDeploy
     steps:
       - GET: tp-mf2
+      - GET: tp-cluster
+      
+  - name: tp-deploy2
+    type: tripubDeploy
+    steps:
+      - GET: tp-mf4
       - GET: tp-cluster
   
   #- name: tp-ecsdeploy3
