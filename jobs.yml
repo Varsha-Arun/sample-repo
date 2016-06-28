@@ -1,32 +1,21 @@
 jobs:
-  - name: repo-manifest6
+  - name: tp-mf1
     type: manifest
     steps:
-      - GET: repo-img1
-      - GET: repo-img2
-      - GET: repo-img3
-      - GET: repo-params1
-        applyTo:
-          - repo-img1
-      - GET: repo-dopts2
-        applyTo:
-          - repo-img2
-          - repo-img3
-  
-  - name: repo-manifest7
-    type: manifest
-    steps:
-      - GET: repo-img1
-      - GET: repo-replicas2
-        applyTo:
-          - repo-manifest7
+      - GET: tp-img1
       
-  - name: repo-ecsdeploy3
-    type: ecsDeploy
+  - name: tp-deploy
+    type: tripubDeploy
     steps:
-      - GET: repo-manifest6
-      - GET: repo-manifest7
-      - GET: repo-ecscluster1
+      - GET: tp-mf1
+      - GET: tp-cluster
+  
+  #- name: tp-ecsdeploy3
+   # type: ecsDeploy
+    #steps:
+     # - GET: repo-manifest6
+      #- GET: repo-manifest7
+      #- GET: repo-ecscluster1
       
   #- name: multimanifest-dcldeploy
    # type: dclDeploy
