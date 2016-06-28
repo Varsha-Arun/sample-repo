@@ -64,6 +64,19 @@ resources:
       memory: 200
       publishAllPorts : true
       
+  - name: tp-params2
+    type: params
+    source:
+      params:
+        test=beta
+        a1=boo
+        
+  - name: tp-dopts2
+    type: dockerOptions
+    source:
+      memory: 120
+      publishAllPorts : false
+      
   - name: tp-replica2
     type: replicas
     source:
