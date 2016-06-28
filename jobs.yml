@@ -3,6 +3,7 @@ jobs:
     type: manifest
     steps:
       - GET: tp-img1 
+      - GET: tp-params1
       
   - name: tp-deploy
     type: tripubDeploy
