@@ -1,5 +1,5 @@
 resources:
-  - name: repo-img1
+  - name: tp-img1
     type: image
     integration: cock1-hub
     source:
@@ -7,7 +7,13 @@ resources:
       isPull: false
       tag: "deploy.4"
       
-  - name: repo-img2
+  - name: tp-cluster
+    type: tripubCluster
+    integration: varsha-tritonpublic
+    source:
+      region: "us-east-1"
+      
+  - name: tp-img2
     type: image
     integration: cock1-hub
     source:
@@ -15,56 +21,52 @@ resources:
       isPull: true
       tag: "deploy.5"
       
-  - name: repo-img3
-    type: image
-    integration: cock1-hub
-    source:
-      name: "shiphitchcock1/betaci_nod_limitless_pl"
-      isPull: true
-      tag: "deploy.6"
+  #- name: tp-img3
+   # type: image
+    #integration: cock1-hub
+    #source:
+     # name: "shiphitchcock1/betaci_nod_limitless_pl"
+      #isPull: true
+      #tag: "deploy.6"
   
-  #- name: repo-dclcluster1
+  #- name: tp-dclcluster1
    # type: dclCluster
     #integration: varsha-dcl
     #source:
     # name : "test-node"
      
-  - name: repo-ecscluster1
-    type: ecsCluster
-    integration: varsha-ecscluster
-    source:
-      name : "testCL" #name of the cluster we are deploying
-      region: "us-west-2"
+ # - name: tp-ecscluster1
+  #  type: ecsCluster
+   # integration: varsha-ecscluster
+    #source:
+     # name : "testCL" #name of the cluster we are deploying
+      #region: "us-west-2"
      
-  - name: repo-params1
-    type: params
-    source:
-      params:
-        api_url : "betaapi.shippable.co"
-        MONGO_API_URL: "localhost:28017"
+ # - name: tp-params1
+  #  type: params
+   # source:
+    #  params:
+     #   api_url : "betaapi.shippable.co"
+      #  MONGO_API_URL: "localhost:28017"
         
-  - name: repo-dopts1
-    type: dockerOptions
-    source:
-      memory: 0
-      cpu-shares: 0
-      portMappings:
-        - 80:3000
+ # - name: tp-dopts1
+  #  type: dockerOptions
+   # source:
+    #  memory: 0
+     # cpu-shares: 0
         
-  - name: repo-dopts2
-    type: dockerOptions
-    source:
-      memory: 64
-      cpu-shares: 8
-      portMappings:
-        - 80:80
+  #- name: tp-dopts2
+   # type: dockerOptions
+    #source:
+     # memory: 64
+      #cpu-shares: 8
         
-  - name: repo-replicas1
-    type: replicas
-    source:
-      count: 1
+ # - name: tp-replica1
+  #  type: replicas
+   # source:
+    #  count: 1
       
-  - name: repo-replicas2
-    type: replicas
-    source:
-      count: 2
+  #- name: tp-replica2
+   # type: replicas
+    #source:
+     # count: 2
