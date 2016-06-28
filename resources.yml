@@ -71,7 +71,7 @@ resources:
       
   - name: tripub-samplerepo
     type: gitRepo
-    integration: github
+    integration: varshaarun-github
     source:
       name: "Varsha-Arun/sample-repo" #you should've access to this project (even if it's public)
       branch: tripub
