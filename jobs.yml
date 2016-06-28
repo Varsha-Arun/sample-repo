@@ -4,11 +4,11 @@ jobs:
     steps:
       - GET: tp-img1 
       
- # - name: tp-deploy
-  #  type: tripubDeploy
-   # steps:
-     # - GET: tp-mf1
-      #- GET: tp-cluster
+  - name: tp-deploy
+    type: tripubDeploy
+    steps:
+      - GET: tp-mf1
+      - GET: tp-cluster
   
   #- name: tp-ecsdeploy3
    # type: ecsDeploy
