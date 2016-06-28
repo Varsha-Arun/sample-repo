@@ -28,6 +28,14 @@ resources:
       name: "scriptnull/busybox"
       isPull: true
       tag: "nodeenv"
+      
+  - name: tp-test
+    type: image
+    integration: cock1-hub
+    source:
+      name: "scriptnull/busybox"
+      isPull: true
+      tag: "nodeenv"
   
   #- name: tp-dclcluster1
    # type: dclCluster
