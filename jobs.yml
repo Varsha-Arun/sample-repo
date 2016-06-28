@@ -2,13 +2,13 @@ jobs:
   - name: tp-mf1
     type: manifest
     steps:
-      - GET: tp-img1
+      - GET: tp-img1 
       
-  #- name: tp-deploy
-   # type: tripubDeploy
-    #steps:
+ # - name: tp-deploy
+  #  type: tripubDeploy
+   # steps:
      # - GET: tp-mf1
-     # - GET: tp-cluster
+      #- GET: tp-cluster
   
   #- name: tp-ecsdeploy3
    # type: ecsDeploy
