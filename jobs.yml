@@ -11,6 +11,7 @@ jobs:
       - GET: tp-img1 
       - GET: tp-params1
       - GET: tp-dopts1
+      - GET: tp-replica2
       
   - name: tp-deploy
     type: tripubDeploy
