@@ -12,7 +12,7 @@ jobs:
   - name: vr-release1
     type: release
     options:
-      action: patch
+      action: minor
     steps:
       - GET: vr-man1
       - GET: vr-man2
