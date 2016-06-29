@@ -2,7 +2,7 @@ resources:
   - name: vr-version
     type: version
     source: 
-      base: "1.0.0"
+      base: "1.22.333"
       
   - name: vr-img1
     type: image
