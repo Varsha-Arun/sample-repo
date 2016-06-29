@@ -11,6 +11,7 @@ jobs:
     steps:
       - GET: tp-img11 
       - GET: tp-img12
+      - GET: tp-params11
       - GET: tp-dopts11
         applyTo: 
           - tp-img12
