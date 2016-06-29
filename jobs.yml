@@ -2,14 +2,14 @@ jobs:
   - name: vr-man1
     type: manifest
     steps:
-      - GET: vr-img1
+      - GET: vr-img2
       
- # - name: vr-release1
-  #  type: release
-   # options:
-    #  action: minor
-    #steps:
-     # - GET: vr-version
+  - name: vr-release1
+    type: release
+    options:
+      action: minor
+    steps:
+      - GET: vr-version
       
 #  - name: vr-tpdeploy
  #   type: tripubDeploy
