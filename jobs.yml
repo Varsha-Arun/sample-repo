@@ -21,11 +21,10 @@ jobs:
   - name: vr-release2
     type: release
     options:
-      action: minor
+      action: major
     steps:
-      - GET: vr-version1
       - GET: vr-man1
-      
+      - GET: vr-version1
       
       
 #  - name: vr-tpdeploy
