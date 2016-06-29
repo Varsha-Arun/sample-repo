@@ -52,11 +52,11 @@ jobs:
       #- GET: tp-cluster
       #- GET: tp-dopts12
   
-  #- name: tri-ecsdeploy
-   # type: ecsDeploy
-    #steps:
-     # - GET: tri-mf13
-     # - GET: tp-ecscluster
+  - name: tri-ecsdeploy
+    type: ecsDeploy
+    steps:
+      - GET: tri-mf13
+      - GET: tp-ecscluster
       
   #- name: multimf-tpdeploy
    # type: tripubDeploy
@@ -65,8 +65,8 @@ jobs:
       #- GET: tri-mf11
       #- GET: tp-cluster
       
-  #- name: tri-ecstotpdeploy
-   # type: tripubDeploy
-    #steps:
-     # - GET: tri-ecsdeploy
-      #- GET: tp-cluster
+  - name: tri-ecstotpdeploy
+    type: tripubDeploy
+    steps:
+      - GET: tri-ecsdeploy
+      - GET: tp-cluster
