@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - GET: tp-imgenv
-     # - GET: tp-params11
+      - GET: tp-params11
       #- GET: tp-replica12
       
   #- name: tri-mf12
