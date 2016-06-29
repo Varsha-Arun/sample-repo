@@ -7,7 +7,7 @@ jobs:
   - name: vr-release1
     type: release
     options:
-      action: minor
+      action: major
     steps:
       - GET: vr-version
       - GET: vr-man1
