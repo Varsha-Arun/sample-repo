@@ -1,29 +1,29 @@
 jobs:
-  - name: vr-man1
+  - name: vr-man3
     type: manifest
     steps:
       - GET: vr-img2
       
-  - name: vr-man2
+  - name: vr-man4
     type: manifest
     steps:
       - GET: vr-img1
       
-  - name: vr-release1
+  - name: vr-release3
     type: release
     options:
       action: patch
     steps:
       - GET: vr-version
-      - GET: vr-man1
-      - GET: vr-man2
+      - GET: vr-man3
+      - GET: vr-man4
       
-  - name: vr-release2
+  - name: vr-release4
     type: release
     options:
       action: patch
     steps:
-      - GET: vr-man1
+      - GET: vr-man3
       - GET: vr-version1
       
       
