@@ -50,7 +50,7 @@ resources:
     source:
       region: "us-east-1"
       
-  - name: tp-params1
+  - name: tp-params11
     type: params
     source:
       params:
@@ -58,7 +58,7 @@ resources:
         MONGO_API_URL : "localhost:28017"
         FOO : BOO
         
-  - name: tp-params2
+  - name: tp-params12
     type: params
     source:
       params:
