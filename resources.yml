@@ -1,5 +1,5 @@
 resources:
-  - name: repo-image
+  - name: vr-img1
     type: image
     integration: cock1-hub
     source:
@@ -7,7 +7,7 @@ resources:
       isPull: false
       tag: latest
       
-  - name: repo-image2
+  - name: vr-img2
     type: image
     integration: cock1-hub
     source:
@@ -15,20 +15,7 @@ resources:
       isPull: false
       tag: "deploy.4"
       
-  - name: repo-dclcluster
-    type: dclCluster
-    integration: varsha-dcl
-    source:
-     name : "test-node"
-     
-  - name: repo-ecscluster
-    type: ecsCluster
-    integration: varsha-ecscluster
-    source:
-      name : "testCL" #name of the cluster we are deploying
-      region: "us-west-2"
-     
-  - name: repo-img
+  - name: vr-img3
     type: image
     integration: cock1-hub
     source:
@@ -36,42 +23,61 @@ resources:
       isPull: false
       tag: "deploy.5"
       
-  - name: repo-param1
+  - name: vr-param1
     type: params
     source:
       params:
         api_url : "betaapi.shippable.co"
         MONGO_API_URL: "localhost:28017"
         
-  - name: repo-param2
-    type: params
-    source:
-      params:
-        foo: booo
-        api_url: https://api.shippable.co
+  #- name: vr-param2
+   # type: params
+    #source:
+     # params:
+      #  foo: booo
+       # api_url: https://api.shippable.co
         
-  - name: repo-doption1
+  - name: vr-dopt1
     type: dockerOptions
     source:
-      memory: 64
-      cpu-shares: 64
+      memory: 32
+      cpu-shares: 8
       portMappings:
         - 80:80
         
-  - name: repo-doption2
-    type: dockerOptions
-    source:
-      memory: 128
+ # - name: vr-dopt2
+  #  type: dockerOptions
+   # source:
+    #  memory: 128
       #cpu-shares: 256
-      portMappings:
-        - 80:3000 
+     # portMappings:
+       # - 80:3000 
         
-  - name: repo-replica1
-    type: replicas
-    source:
-      count: 1
+ # - name: vr-replica1
+  #  type: replicas
+   # source:
+    #  count: 1
       
-  - name: repo-replica2
+  - name: vr-replica2
     type: replicas
     source:
       count: 2
+      
+#  - name: vr-dclcluster
+ #   type: dclCluster
+  #  integration: varsha-dcl
+   # source:
+    # name : "test-node"
+     
+  #- name: vr-ecscluster
+    #type: ecsCluster
+   # integration: varsha-ecscluster
+    #source:
+     # name : "testCL" #name of the cluster we are deploying
+      #region: "us-west-2"
+      
+  #- name: vr-tpcluster
+    #type: tripubCluster
+    #integration: varsha-tritonpublic
+    #source:
+     # region: "us-east-1"
