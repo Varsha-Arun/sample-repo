@@ -23,8 +23,9 @@ jobs:
     options:
       action: patch
     steps:
-      - GET: vr-version1
       - GET: vr-man1
+      - GET: vr-version1
+      
       
 #  - name: vr-tpdeploy
  #   type: tripubDeploy
