@@ -12,11 +12,12 @@ jobs:
   - name: vr-release1
     type: release
     options:
-      action: major
+      action: patch
     steps:
+      - GET: vr-man1
       - GET: vr-man2
       - GET: vr-version
-      - GET: vr-man1
+      
       
 #  - name: vr-tpdeploy
  #   type: tripubDeploy
