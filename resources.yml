@@ -1,4 +1,9 @@
 resources:
+  - name: vr-version
+    type: version
+    source: 
+      base: "1.0.0"
+      
   - name: vr-img1
     type: image
     integration: cock1-hub
@@ -7,21 +12,21 @@ resources:
       isPull: false
       tag: latest
       
-  - name: vr-img2
-    type: image
-    integration: cock1-hub
-    source:
-      name: "shiphitchcock1/betaci_nod_limitless_pl"
-      isPull: false
-      tag: "deploy.4"
+#  - name: vr-img2
+ #   type: image
+  #  integration: cock1-hub
+   # source:
+    #  name: "shiphitchcock1/betaci_nod_limitless_pl"
+     # isPull: false
+      #tag: "deploy.4"
       
-  - name: vr-img3
-    type: image
-    integration: cock1-hub
-    source:
-      name: "shiphitchcock1/betaci_nod_limitless_pl"
-      isPull: false
-      tag: "deploy.5"
+  #- name: vr-img3
+   # type: image
+    #integration: cock1-hub
+    #source:
+     # name: "shiphitchcock1/betaci_nod_limitless_pl"
+      #isPull: false
+      #tag: "deploy.5"
       
   - name: vr-param1
     type: params
