@@ -69,9 +69,9 @@ resources:
     source:
       count: 2
       
-  - name: tripub-samplerepo
-    type: gitRepo
-    integration: varshaarun-github
-    source:
-      name: "Varsha-Arun/sample-repo" #you should've access to this project (even if it's public)
-      branch: tripub
+ # - name: tripub-samplerepo
+  #  type: gitRepo
+   # integration: varshaarun-github
+    #source:
+     # name: "Varsha-Arun/sample-repo" #you should've access to this project (even if it's public)
+      #branch: tripub
