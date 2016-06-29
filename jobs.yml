@@ -12,8 +12,8 @@ jobs:
       - GET: tp-img11 
       - GET: tp-img12
       - GET: tp-dopts11
-      #  applyTo: 
-       #   - tp-img12
+        applyTo: 
+          - tp-img12
        
   
       
