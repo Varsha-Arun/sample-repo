@@ -15,8 +15,9 @@ jobs:
       action: patch
     steps:
       - GET: vr-man1
-      - GET: vr-version
       - GET: vr-man2
+      - GET: vr-version
+      
       
       
 #  - name: vr-tpdeploy
