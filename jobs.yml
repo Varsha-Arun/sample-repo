@@ -29,11 +29,11 @@ jobs:
      # - GET: tri-mf12
      
       
-  #- name: tri-deploy
-   # type: tripubDeploy
-    #steps:
-     # - GET: tri-mf11
-      #- GET: tp-cluster
+  - name: tri-deploy
+    type: tripubDeploy
+    steps:
+      - GET: tri-mf11
+      - GET: tp-cluster
       
   #- name: tri-deploytest
    # type: tripubDeploy
