@@ -15,10 +15,8 @@ jobs:
       action: minor
     steps:
       - GET: vr-version
-      - GET: vr-man1
       - GET: vr-man2
-      
-      
+      - GET: vr-man1
       
 #  - name: vr-tpdeploy
  #   type: tripubDeploy
