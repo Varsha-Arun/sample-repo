@@ -14,19 +14,17 @@ jobs:
       - GET: tp-dopts11
         applyTo: 
           - tp-img12
-       
-  
       
- # - name: tri-mf13
-  #  type: manifest
-   # steps:
-    #  - GET: tp-img11
-    #  - GET: tp-dopts11
+  - name: tri-mf13
+    type: manifest
+    steps:
+      - GET: tp-img11
+      - GET: tp-dopts11
     
- # - name: tri-mf14tomf13
-  #  type: manifest
-   # steps:
-    #  - GET: tri-mf12
+  - name: tri-mf14tomf13
+    type: manifest
+    steps:
+      - GET: tri-mf12
      
       
   - name: tri-deploy
@@ -41,11 +39,11 @@ jobs:
       - GET: tri-mf12
       - GET: tp-cluster
       
-  #- name: tri-deploytest
-   # type: tripubDeploy
-    #steps:
-     # - GET: tri-mf15tomf13
-      #- GET: tp-cluster
+  - name: tri-deploymftomf
+    type: tripubDeploy
+    steps:
+      - GET: tri-mf14tomf13
+      - GET: tp-cluster
       
   #- name: tri-deploy2override
    # type: tripubDeploy
