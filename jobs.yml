@@ -4,11 +4,17 @@ jobs:
     steps:
       - GET: vr-img2
       
+  - name: vr-man2
+    type: manifest
+    steps:
+      - GET: vr-img1
+      
   - name: vr-release1
     type: release
     options:
       action: major
     steps:
+      - GET: vr-man2
       - GET: vr-version
       - GET: vr-man1
       
