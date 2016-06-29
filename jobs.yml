@@ -1,56 +1,68 @@
 jobs:
-  - name: tp-mf1
+  - name: tri-mf11
     type: manifest
     steps:
-      - GET: tp-test 
-      - GET: tp-params1
+      - GET: tp-imgenv
+     # - GET: tp-params11
+      #- GET: tp-replica12
       
-  - name: tp-mf2
-    type: manifest
-    steps:
-      - GET: tp-img1 
-      - GET: tp-params1
-      - GET: tp-dopts1
-      - GET: tp-replica2
-      
-  - name: tp-mf3
-    type: manifest
-    steps:
-      - GET: tp-test 
-      - GET: tp-img2
-      - GET: tp-dopts1
-      - GET: tp-params2
-        applyTo:
-          - tp-test
-      
-  - name: tp-mf4
-    type: manifest
-    steps:
-      - GET: tp-mf3
-      - GET: tp-dopts2
-      
-  - name: tp-deploy
-    type: tripubDeploy
-    steps:
-      - GET: tp-mf2
-      - GET: tp-cluster
-      
-  - name: tp-deploy2
-    type: tripubDeploy
-    steps:
-      - GET: tp-mf4
-      - GET: tp-cluster
+  #- name: tri-mf12
+   # type: manifest
+    #steps:
+     # - GET: tp-img11 
+     # - GET: tp-img12
+     # - GET: tp-dopts11
+      #  applyTo: 
+       #   - tp-img12
+       
   
-  #- name: tp-ecsdeploy3
+      
+ # - name: tri-mf13
+  #  type: manifest
+   # steps:
+    #  - GET: tp-img11
+    #  - GET: tp-dopts11
+    
+  #- name: tri-mf14tomf13
+   # type: manifest
+    #steps:
+     # - GET: tri-mf12
+     
+      
+  #- name: tri-deploy
+   # type: tripubDeploy
+    #steps:
+     # - GET: tri-mf11
+      #- GET: tp-cluster
+      
+  #- name: tri-deploytest
+   # type: tripubDeploy
+    #steps:
+     # - GET: tri-mf15tomf13
+      #- GET: tp-cluster
+      
+  #- name: tri-deploy2override
+   # type: tripubDeploy
+    #steps:
+     # - GET: tri-mf13
+      #- GET: tp-cluster
+      #- GET: tp-dopts12
+  
+  #- name: tri-ecsdeploy
    # type: ecsDeploy
     #steps:
-     # - GET: repo-manifest6
-      #- GET: repo-manifest7
-      #- GET: repo-ecscluster1
+     # - GET: tri-mf13
+     # - GET: tp-ecscluster
       
-  #- name: multimanifest-dcldeploy
-   # type: dclDeploy
+  #- name: multimf-tpdeploy
+   # type: tripubDeploy
     #steps:
-     # - GET: repo-manifest
-      #- GET: repo-manifest2
-      #- GET: repo-dclcluster
+     # - GET: tri-mf13
+      #- GET: tri-mf11
+      #- GET: tp-cluster
+      
+  #- name: tri-ecstotpdeploy
+   # type: tripubDeploy
+    #steps:
+     # - GET: tri-ecsdeploy
+      #- GET: tp-cluster
