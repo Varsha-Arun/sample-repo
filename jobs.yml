@@ -23,8 +23,8 @@ jobs:
     options:
       action: beta
     steps:
-      - GET: vr-man6
       - GET: vr-version3
+      - GET: vr-man6
       
 #  - name: vr-tpdeploy
  #   type: tripubDeploy
