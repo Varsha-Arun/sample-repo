@@ -21,10 +21,10 @@ jobs:
   - name: vr-release4
     type: release
     options:
-      action: alpha
+      action: rc
     steps:
-      - GET: vr-version3
       - GET: vr-man6
+      - GET: vr-version3
       
 #  - name: vr-tpdeploy
  #   type: tripubDeploy
