@@ -2,12 +2,12 @@ jobs:
   - name: vr-man4
     type: manifest
     steps:
-      - GET: vr-img1
+      - GET: vr-img2
       
   - name: vr-man5
     type: manifest
     steps:
-      - GET: vr-img2
+      - GET: vr-img1
       
  # - name: vr-release3
   #  type: release
