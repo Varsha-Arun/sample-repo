@@ -21,10 +21,11 @@ jobs:
   - name: vr-release4
     type: release
     options:
-      action: rc
+      action: alpha
     steps:
-      - GET: vr-man6
       - GET: vr-version3
+      - GET: vr-man6
+    
       
     
 #  - name: vr-tpdeploy
