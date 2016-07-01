@@ -47,3 +47,11 @@ jobs:
     steps:
       - GET: r6115a-manifest
       - GET: r6115-ecscluster
+      
+  - name: r6115b-ecsdeploy
+    type: ecsDeploy
+    options: 
+      deployMethod: upgrade # if this property doesn't exist, 'blueGreen' will be the default
+    steps:
+      - GET: r6115a-manifest
+      - GET: r6115-ecscluster
