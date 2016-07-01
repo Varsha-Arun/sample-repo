@@ -66,6 +66,14 @@ resources:
       portMappings:
         - 80:3000 
         
+  - name: r6115c-dopt
+    type: dockerOptions
+    source:
+      memory: 64
+      cpu-shares: 8
+      portMappings:
+        - 80:3000 
+        
   - name: r6115a-replica
     type: replicas
     source:
