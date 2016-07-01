@@ -7,12 +7,13 @@ jobs:
       - GET: r6115a-dopt
      
       
- # - name: repo-manifest2-6115
-  #  type: manifest
-   # steps:
-    #  - GET: repo-image2
-     # - GET: repo-param2
-     # - GET: repo-doption2
+  - name: r6115b-manifest
+    type: manifest
+    steps:
+      - GET: r6115c-img6115
+      - GET: r6115a-param
+      - GET: r6115c-dopt
+      - GET: r6115b-replica
      
  # - name: repo-ecsdeploy6115
   #  type: ecsDeploy
