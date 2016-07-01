@@ -4,7 +4,7 @@ jobs:
     steps:
       - GET: r6115b-image
       #- GET: r6115b-param
-      #- GET: r6115a-dopt
+      - GET: r6115a-dopt
      
       
  # - name: repo-manifest2-6115
