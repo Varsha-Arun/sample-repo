@@ -1,42 +1,49 @@
 jobs:
-  - name: repo-manifest
+  - name: r6115a-manifest
     type: manifest
     steps:
-      - GET: repo-img
-      - GET: repo-param1
-      #- GET: repo-doption2
-      - GET: repo-replica2
+      - GET: r6115b-image
+      #- GET: r6115b-param
+      #- GET: r6115a-dopt
+     
       
-  - name: repo-manifest2
-    type: manifest
-    steps:
-      - GET: repo-image2
-      - GET: repo-param2
+ # - name: repo-manifest2-6115
+  #  type: manifest
+   # steps:
+    #  - GET: repo-image2
+     # - GET: repo-param2
      # - GET: repo-doption2
      
-  - name: repo-ecsdeploy
-    type: ecsDeploy
-    steps:
-      - GET: repo-manifest2
-      - GET: repo-ecscluster
+ # - name: repo-ecsdeploy6115
+  #  type: ecsDeploy
+   # steps:
+    #  - GET: repo-manifest2
+     # - GET: repo-ecscluster
     
-  - name: repo-dcldeploy
-    type: dclDeploy
-    steps:
-      - GET: repo-manifest
-      - GET: repo-dclcluster
-      - GET: repo-replica1
+#  - name: repo-dcldeploy6115
+ #   type: dclDeploy
+  #  steps:
+   #   - GET: repo-manifest
+    #  - GET: repo-dclcluster
+     # - GET: repo-replica1
     
-  - name: repo-ecsdeploytodcldeploy
-    type: dclDeploy
-    steps:
-      - GET: repo-ecsdeploy
-      - GET: repo-dclcluster
+#  - name: repo-ecsdeploytodcldeploy6115
+ #   type: dclDeploy
+  #  steps:
+   #   - GET: repo-ecsdeploy
+    #  - GET: repo-dclcluster
       
-  - name: multimanifest-dcldeploy
-    type: dclDeploy
-    steps:
-      - GET: repo-manifest
-      - GET: repo-manifest2
-      - GET: repo-dclcluster
+#  - name: multimanifest-dcldeploy
+ #   type: dclDeploy
+  #  steps:
+   #   - GET: repo-manifest
+     # - GET: repo-manifest2
+    #  - GET: repo-dclcluster
       
+ # - name: my-ecs-deployment
+  #  type: ecsDeploy
+   # options: 
+    #  deployMethod: blueGreen # if this property doesn't exist, 'blueGreen' will be the default
+    #steps:
+     # - GET: r6115a-manifest
+      #- GET: r6115-ecscluster
