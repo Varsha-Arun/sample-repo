@@ -15,11 +15,11 @@ jobs:
       - GET: r6115c-dopt
       - GET: r6115b-replica
      
- # - name: repo-ecsdeploy6115
-  #  type: ecsDeploy
-   # steps:
-    #  - GET: repo-manifest2
-     # - GET: repo-ecscluster
+  - name: r6115d-ecsdeploy
+    type: ecsDeploy
+    steps:
+      - GET: r6115b-manifest
+      - GET: r6115-ecscluster
     
 #  - name: repo-dcldeploy6115
  #   type: dclDeploy
