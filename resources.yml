@@ -1,5 +1,18 @@
 resources:
-  - name: repo-image
+  - name: r6115-dclcluster
+    type: dclCluster
+    integration: varsha-dcl
+    source:
+     name : "test-node"
+     
+  - name: r6115-ecscluster
+    type: ecsCluster
+    integration: varsha-ecscluster
+    source:
+      name : "testCL" #name of the cluster we are deploying
+      region: "us-west-2"
+  
+  - name: r6115a-image
     type: image
     integration: cock1-hub
     source:
@@ -7,28 +20,15 @@ resources:
       isPull: false
       tag: latest
       
-  - name: repo-image2
+  - name: r6115b-image
     type: image
     integration: cock1-hub
     source:
       name: "shiphitchcock1/betaci_nod_limitless_pl"
       isPull: false
       tag: "deploy.4"
-      
-  - name: repo-dclcluster
-    type: dclCluster
-    integration: varsha-dcl
-    source:
-     name : "test-node"
      
-  - name: repo-ecscluster
-    type: ecsCluster
-    integration: varsha-ecscluster
-    source:
-      name : "testCL" #name of the cluster we are deploying
-      region: "us-west-2"
-     
-  - name: repo-img
+  - name: r6115c-img6115
     type: image
     integration: cock1-hub
     source:
@@ -36,21 +36,21 @@ resources:
       isPull: false
       tag: "deploy.5"
       
-  - name: repo-param1
+  - name: r6115a-param
     type: params
     source:
       params:
         api_url : "betaapi.shippable.co"
         MONGO_API_URL: "localhost:28017"
         
-  - name: repo-param2
+  - name: r6115b-param
     type: params
     source:
       params:
         foo: booo
         api_url: https://api.shippable.co
         
-  - name: repo-doption1
+  - name: r6115a-dopt
     type: dockerOptions
     source:
       memory: 64
@@ -58,7 +58,7 @@ resources:
       portMappings:
         - 80:80
         
-  - name: repo-doption2
+  - name: r6115b-dopt
     type: dockerOptions
     source:
       memory: 128
@@ -66,12 +66,12 @@ resources:
       portMappings:
         - 80:3000 
         
-  - name: repo-replica1
+  - name: r6115a-replica
     type: replicas
     source:
       count: 1
       
-  - name: repo-replica2
+  - name: r6115b-replica
     type: replicas
     source:
       count: 2
